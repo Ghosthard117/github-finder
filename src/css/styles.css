@@ -1,0 +1,217 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+/* Main */
+.main__container {
+  max-width: 70vw;
+  min-width: 320px;
+  min-height: 20rem;
+}
+
+/* Header */
+.header__container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.7rem;
+}
+
+.theme {
+  margin-left: .7rem;
+}
+
+.theme i {
+  margin-left: .5rem;
+}
+
+
+.theme__switch {
+  text-decoration: none;
+}
+
+
+/* search__container */
+.search__container {
+  padding: .5rem .5rem .5rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  outline: none;
+}
+
+.form__icon {
+  font-size: 1.2rem;
+}
+
+.form__button {
+  background-color: #1f5feb;
+  border: none;
+  padding: .5rem;
+  color: #fff;
+  border-radius: .3rem;
+  font-size: .7;
+  cursor: pointer;
+}
+
+/* resutl__containers */
+.resutl__container {
+  padding: 2rem;
+  display: grid;
+  border-radius: 1rem;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: .5rem 1rem;
+  grid-template-areas: 
+    "avatar name joined"
+    "avatar username username"
+    "avatar bio bio"
+    "avatar stats stats"
+    "avatar contact contact";
+}
+
+.waiting, .not-found {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.avatar {
+  width: 80px;
+  border-radius: 50%;
+  grid-area: avatar;
+  justify-self: center;
+}
+
+.name {
+  grid-area: name;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.joined {
+  grid-area: joined;
+  font-size: .5rem;
+  margin: 0;
+  justify-self: end;
+  align-self: center;
+}
+
+.username {
+  grid-area: username;
+  font-weight: normal;
+  margin: 0;
+  color: #1f5feb;
+}
+
+.bio {
+  grid-area: bio;
+  margin: 0;
+  font-size: .7rem;
+}
+
+.stats {
+  grid-area: stats;
+  display: flex;
+  flex-wrap: wrap;
+  padding: .5rem 1rem;
+  justify-content: space-around;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+.stats > p {
+  margin: 0;
+  font-size: .5rem;
+  flex-basis: 33%;
+}
+
+.stats > small {
+  margin: 0;
+  font-size: 1rem; 
+  flex-basis: 33%;
+}
+
+.contact {
+  grid-area: contact;
+  display: grid;
+  gap: .5rem;
+  grid: 1fr 1fr / 1fr 1fr;
+}
+
+.link {
+  text-decoration: none;
+  font-size: .7rem;
+}
+
+.link i {
+  margin-right: .3rem;
+}
+
+/* Screens adaption */
+@media screen and (max-width:540px) {
+  .resutl__container {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+      "avatar name"
+      "avatar username"
+      "avatar joined"
+      "bio bio"
+      "stats stats"
+      "contact contact";
+  }
+
+  .avatar, .joined {
+    justify-self: start;
+  }
+
+  .bio {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .contact {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+}

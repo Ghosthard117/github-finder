@@ -1,0 +1,54 @@
+/* dark theme */
+body {
+  background-color: #010409;
+}
+
+.header__title {
+  color: #fff;
+}
+
+.theme i {
+  color: #fff;
+}
+
+.theme__switch {
+  color: #fff;
+}
+
+.search__container {
+  background-color: #010409;
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.form__input {
+  color: #b0b0b0;
+}
+
+.form__icon {
+  color: #1f5feb;
+}
+
+.resutl__container {
+  background-color: #010409;
+  box-shadow: 3px 2px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bio {
+  color: #b0b0b0;
+}
+
+.stats {
+  background-color: #010409;
+}
+
+.stats > small {
+  color: #b0b0b0;
+}
+
+.link {
+  color: #b0b0b0;
+}
+
+.link i {
+  color: #fff;
+}
