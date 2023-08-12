@@ -12,22 +12,22 @@ html, body {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000;
+  color: white;
 }
 
 /* Main */
-.main__container {
+.main {
   max-width: 70vw;
   min-width: 320px;
   min-height: 20rem;
 }
 
 /* Header */
-.header__container {
+.header {
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
@@ -41,21 +41,19 @@ body {
 }
 
 .theme {
-  margin-left: .7rem;
+  font-size: .7rem;
 }
 
 .theme i {
   margin-left: .5rem;
 }
 
-
 .theme__switch {
   text-decoration: none;
 }
 
-
-/* search__container */
-.search__container {
+/* Search */
+.search {
   padding: .5rem .5rem .5rem 1rem;
   border-radius: 1rem;
   margin-bottom: 1.5rem;
@@ -90,8 +88,8 @@ body {
   cursor: pointer;
 }
 
-/* resutl__containers */
-.resutl__container {
+/* Result */
+.result {
   padding: 2rem;
   display: grid;
   border-radius: 1rem;
@@ -99,11 +97,12 @@ body {
   grid-template-columns: 1fr 2fr 2fr;
   gap: .5rem 1rem;
   grid-template-areas: 
-    "avatar name joined"
-    "avatar username username"
-    "avatar bio bio"
-    "avatar stats stats"
-    "avatar contact contact";
+      "avatar name joined"
+      "avatar username username"
+      "avatar bio bio"
+      "avatar stats stats"
+      "avatar contact contact"
+  ;
 }
 
 .waiting, .not-found {
@@ -141,6 +140,7 @@ body {
   color: #1f5feb;
 }
 
+
 .bio {
   grid-area: bio;
   margin: 0;
@@ -163,9 +163,10 @@ body {
   flex-basis: 33%;
 }
 
+
 .stats > small {
   margin: 0;
-  font-size: 1rem; 
+  font-size: 1rem;
   flex-basis: 33%;
 }
 
@@ -185,26 +186,27 @@ body {
   margin-right: .3rem;
 }
 
-/* Screens adaption */
-@media screen and (max-width:540px) {
-  .resutl__container {
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-      "avatar name"
-      "avatar username"
-      "avatar joined"
-      "bio bio"
-      "stats stats"
-      "contact contact";
+
+@media screen and (max-width: 540px) {
+  .result {
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: 
+          "avatar name"
+          "avatar username"
+          "avatar joined"
+          "bio bio"
+          "stats stats"
+          "contact contact"
+      ;
   }
 
   .avatar, .joined {
-    justify-self: start;
+      justify-self:start;
   }
 
   .bio {
-    margin-top: 1rem;
+      margin-top: 1rem;
   }
 }
 
@@ -212,6 +214,7 @@ body {
   .contact {
     grid-template-rows: auto;
     grid-template-columns: 1fr;
-    row-gap: 1rem;
+    grid-row-gap: 1rem;
   }
+
 }
