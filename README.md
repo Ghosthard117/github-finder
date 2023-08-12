@@ -11,7 +11,7 @@ https://64d7a42f2fce3c10d21944c1--cute-daffodil-2686c8.netlify.app/
 
 ## Screenshots
 ![Screenshot 2023-08-12 092608](https://github.com/Ghosthard117T/github-finder/assets/132961867/ba348e52-70de-4770-b3c2-ff4e271352ec)
-![Uploading Screenshot 2023-08-12 092552.png…]()
+![Screenshot 2023-08-12 092552](https://github.com/Ghosthard117T/github-finder/assets/132961867/2bf8d9d1-cd06-4ebd-9f51-6bbb0d1bf008)
 
 Clone the project
 
